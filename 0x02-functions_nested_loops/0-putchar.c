@@ -11,9 +11,9 @@ char s[] = "_putchar";
 int i = 0;
 while (s[i] != '\0')
 {
-int _putchar(s[i]);
+int _putchar( s[i]);
 i++;
-}
-int _putchar(10);
+}	
+int _putchar( 10);
 return (0);
 }
