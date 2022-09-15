@@ -1,5 +1,5 @@
-#ifndef _main_h_
-#define _main_h_
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 /**
 * main - header file for prototypes
@@ -8,7 +8,7 @@
 */
 
 int _isupper(int c);
-int _isdigit(int c)
+int _isdigit(int c);
 int mul(int a, int b);
 void print_numbers(void);
 void print_most_numbers(void);
@@ -20,4 +20,4 @@ void print_triangle(int size);
 void print_number(int n);
 int _putchar(char);
 
-#endif /* main_h */
+#endif /* MAIN.H */
