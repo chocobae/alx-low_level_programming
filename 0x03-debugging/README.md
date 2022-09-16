@@ -10,7 +10,7 @@ You do not have to compile with -Wall -Werror -Wextra -pedantic for this task.
 
 2. This program prints the largest of three integers.
 
-? That’s definitely not right.
+? That’s definitely not right..
 
 
 
