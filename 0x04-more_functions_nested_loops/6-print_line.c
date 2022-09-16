@@ -1,23 +1,18 @@
 #include "main.h"
 
 /**
-* print_line - prints line using "_" character of n length
-*@n: length of the line
-*
-* Return: void
+*  print_line - prints straight line n times.
+* @n: times straight line is printed.
+* Return: no return.
 */
+
 void print_line(int n)
 {
-	int i = 0;
+	int i;
 
-
-	if (n > 0)
+	for (i = 0; i < n; i++)
 	{
-		while (i < n)
-		{
-			_putchar(95);
-			i++;
-		}
+		_putchar(95);
 	}
 	_putchar('\n');
 }
