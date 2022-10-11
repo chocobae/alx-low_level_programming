@@ -35,7 +35,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (!(p_dog->name) || !(p_dog->owner))
 	{
-
 		free(p_dog->owner);
 		free(p_dog->name);
 		free(p_dog);
