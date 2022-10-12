@@ -9,5 +9,6 @@ int int_index(int *array, int size, int (*cmp)(int));
 int (*get_op_func(char *s))(int, int);
 int op_add(int a, int b);
 int (*get_op_func(char *s))(int, int);
+int _putchar(char c);
 
 #endif /* function_pointers_h */
