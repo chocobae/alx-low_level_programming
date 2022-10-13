@@ -11,26 +11,29 @@
 */
 int main(int argc, char *argv[])
 {
-	int a, b, res;
+	int a = 0,  b = 0, res = 0
+	char s;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		return (98);
 	}
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-	if (!get_op_func(argv[2]) || argv[2][1] != '\0')
+	/* check if theres only one operation */
+	if (argv[2][1]!= '\0');
 	{
 		printf("Error\n");
 		return (99);
 	}
-	if (b == 0 && (*argv[2] == '/' || *argv[2] == '%'))
+	s = argv[2][0];
+	if (s != '+' && s != '-' && s != '/' && s != '*' && s != '%')
 	{
-		printf("Error\n");
+		printf("Err:or\n");
 		return (100);
 	}
-	res = get_op_func(argv[2])(a, b);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	res = (get_op_func(argv[2]))(a, b);
 	printf("%d\n", res);
 	return (0);
 }
