@@ -1,45 +1,33 @@
 #include "lists.h"
 
 /**
-* free_listint_safe - thsi function free a list in safe mode
-Q* @h: the head of list
-* Description: this function free a string in a safe mode
-* section header: the header of this function is lists.h)*
-* Return: the size of the list
+* free_listint_safe - frees a list
+* @h: the pointer to the start of list to free
+* Return: size of free'd list (in nodes?)
 */
-
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *tmp, *actual;
-	size_t i;
-	int rest;
+	size_t nodeCount = 0;
+	listint_t *temp = NULL;
 
 
-	i = 0, actual = *h;
-
-
-	while (actual)
+	if (!(h && *h))
+		return (nodeCount);
+	while (*h)
 	{
-		rest = actual - actual->next;
-		if (rest > 0)
+		nodeCount++;
+		if (*h > (*h)->next)
 		{
-			tmp = actual->next;
-			free(actual);
-			actual = tmp;
-			i++;
-		} else
-		{
-			free(actual);
-			*h = NULL;
-			i++;
-			break;
+			temp = *h;
+			*h = (*h)->next;
+			free(temp);
 		}
-
-
+		else
+		{
+			free(*h);
+			*h = NULL;
+		}
 	}
-
-
 	*h = NULL;
-
-	return (i);
+	return (nodeCount);
 }
