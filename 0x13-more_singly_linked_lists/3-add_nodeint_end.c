@@ -23,16 +23,16 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 /* if head is a null pointer, assign new node to it*/
 	if (*head == NULL)
 		*head = new_nodeint;
-	
+
 	else
 	{
 		last_nodeint = *head;
 
-	
+
 		while (last_nodeint->next != NULL)
 			last_nodeint = last_nodeint->next;
 
-	
+
 		last_nodeint->next = new_nodeint;
 	}
 
